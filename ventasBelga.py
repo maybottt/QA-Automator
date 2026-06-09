@@ -206,7 +206,8 @@ else:
                     # Seleccionamos la celda con el nombre en la tabla del popup
                     grid_popup = popup_medicos.child_window(auto_id="gridControl1", control_type="Table")
                     celda_medico = grid_popup.child_window(title_re=".*Nombres row.*")
-                    celda_medico.click_input()
+                    # celda_medico.click_input()
+                    send_keys("{DOWN}")
                     sleep(0.3)
                     send_keys("{ENTER}") # Confirma y cierra la ventana
                     sleep(1.0)
